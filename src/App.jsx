@@ -1,29 +1,15 @@
 import { useState } from "react";
 import "./App.css";
+import { Link, BrowserRouter as Router, Route } from "react-router-dom";
 
-function HeaderBar() {
-  return (
-    <>
-      <h1 id="page-header">College Pricing Tool</h1>
-    </>
-  );
-}
-
-function PageContent() {
-  return (
-    <>
-      <button id="get-started-button" link="/tool">
-        Get Started
-      </button>
-    </>
-  );
-}
+import Tool from "./tool";
+import Home from "./Home";
 
 export default function App() {
   return (
-    <>
-      <HeaderBar></HeaderBar>
-      <PageContent></PageContent>
-    </>
+    <Switch>
+      <Route exact path="/" component={Home}></Route>
+      <Route exact path="/tool" component={Tool}></Route>
+    </Switch>
   );
 }
