@@ -6,4 +6,19 @@
 body {
   padding: 0;
   margin: 0;
+  background-color: #f2f3ff;
+}
+
+.get-started-button {
+  margin: auto;
+  text-align: center;
+  padding:40px;
+}
+
+.get-started-button button {
+  font-size: xx-large;
+  padding: 20px;
+  background-color: #002033;
+  color:white;
+  border-radius:10%;
 }

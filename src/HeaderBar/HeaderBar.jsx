@@ -5,6 +5,7 @@ export default function HeaderBar() {
   return (
     <>
       <h1>College Pricing</h1>
+      <hr id="header-line"></hr>
     </>
   );
 }
