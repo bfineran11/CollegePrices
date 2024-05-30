@@ -1,64 +1,59 @@
 import { useState } from "react";
 import "./CalculationTool.css";
 
-function YearsToPayOffCollegeWidget() {
-  return(
-    <>
-      <h3 id="tool-page-widget-header">In how many years do you want to be done paying off college</h3>
-    </>
-  );
-}
 
-function PerMonthPaymentWidget() {
-  return(
-    <>
-      <h3 id="tool-page-widget-header">Monthly Payment</h3>
-    </>
-  );
-}
-
-function LoansInterestRateWidget() {
-  return(
-    <>
-      <h3 id="tool-page-widget-header"></h3>
-    </>
-  );
-}
-
-function LoansWidget() {
-  return(
-    <>
-      <h3 id="tool-page-widget-header">Loans</h3>
-    </>
-  );
-}
-
-function ScholarshipWidget() {
-  return(
-    <>
-      <h3 id="tool-page-widget-header">Scholarships (How much removed per semester)</h3>
-    </>
-  );
-}
-
-function SemesterCostWidget() {
-  return (
-    <>
-      <h3 id="tool-page-widget-header">Semester Cost</h3>
-    </>
-  );
-}
+var netCost = 0;
 
 
 function TextAreaWidget() {
+
+  function calculate(formData) {
+      let cost = formData.get("semester-cost");
+      let numSemesters = formData.get("number-of-semesters");
+      let scholarships = formData.get("scholarships");
+
+      netCost = (cost * numSemesters) - (scholarships*numSemesters);
+      <Result></Result>
+  }
+
   return(
     <>
-      <SemesterCostWidget></SemesterCostWidget>
-      <ScholarshipWidget></ScholarshipWidget>
-      <LoansWidget></LoansWidget>
-      <LoansInterestRateWidget></LoansInterestRateWidget>
-      <PerMonthPaymentWidget></PerMonthPaymentWidget>
-      <YearsToPayOffCollegeWidget></YearsToPayOffCollegeWidget>
+      <form action={calculate}>
+
+        <label>
+          Semester Cost:
+          <input type="number" name="semester-cost" onChange={calculate}/>
+        </label>
+
+        <br></br>
+
+        <label>
+          Number of Semesters:
+          <input type="number" name="number-of-semesters" onChange={calculate}/>
+        </label>
+
+        <br></br>
+
+        <label>
+          Scholarships / Tutiotion Support:
+          <input type="number" name="scholarships" onChange={calculate}/>
+        </label>
+
+        <br />
+    
+      </form>
+
+
+    </>
+  );
+}
+
+function Result() {
+  return(
+    <>
+      <div>
+        <h2>Net Cost: </h2>
+      </div>
     </>
   );
 }
