@@ -1,0 +1,22 @@
+{
+    "tuition-support": {
+        "Michigan Scholarship Search": "https://www.michigan.gov/mistudentaid/students-families/mi-scholarship-search",
+        "careeronestop": "https://www.careeronestop.org/Toolkit/Training/find-scholarships.aspx",
+        "Federal Student Aid": "https://studentaid.gov/understand-aid/types/scholarships",
+        "Search for Scholarships (College Board)": "https://bigfuture.collegeboard.org/pay-for-college/scholarship-search"
+    },
+
+    "college-searching": {
+        "College Data": "https://www.collegedata.com/college-search",
+        "College Search Step-by-Step (College Board)": "https://bigfuture.collegeboard.org/plan-for-college/find-your-fit/college-search-step-by-step",
+        "College Raptor": "https://www.collegeraptor.com/college-search/",
+        "appily": "https://www.appily.com/colleges"
+    },
+
+    "high-school-prep": {
+        "Modern States": "https://modernstates.org/",
+        "College Board": "https://www.collegeboard.org/",
+        "SAT": "https://satsuite.collegeboard.org/sat",
+        "ACT": "https://www.act.org/"
+    }
+}

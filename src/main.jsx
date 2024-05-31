@@ -16,6 +16,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/" element={<Home />} />
       <Route path="/calculation-tool" element={<CalculationTool />} />
       <Route path="/resources" element={<Resources />} />
+      <Route path="/results" element={<Results />} />
     </Routes>
   </BrowserRouter>
 );

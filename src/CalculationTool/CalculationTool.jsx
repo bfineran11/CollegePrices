@@ -1,8 +1,5 @@
-import { useState } from "react";
 import "./CalculationTool.css";
-
-
-var netCost = 0;
+import { useNavigate } from "react-router-dom";
 
 
 function TextAreaWidget() {
@@ -13,7 +10,9 @@ function TextAreaWidget() {
       let scholarships = formData.get("scholarships");
 
       netCost = (cost * numSemesters) - (scholarships*numSemesters);
-      <Result></Result>
+      let navigate = useNavigate();
+      navigate("results");
+      
   }
 
   return(
@@ -21,42 +20,37 @@ function TextAreaWidget() {
       <form action={calculate}>
 
         <label>
-          Semester Cost:
-          <input type="number" name="semester-cost" onChange={calculate}/>
+          Semester Cost: 
+          <input type="number" name="semester-cost"/>
         </label>
 
         <br></br>
 
         <label>
           Number of Semesters:
-          <input type="number" name="number-of-semesters" onChange={calculate}/>
+          <input type="number" name="number-of-semesters"/>
         </label>
 
         <br></br>
 
         <label>
           Scholarships / Tutiotion Support:
-          <input type="number" name="scholarships" onChange={calculate}/>
+          <input type="number" name="scholarships"/>
         </label>
 
         <br />
+
+        <button action="submit">Find out Now!</button>
     
       </form>
 
 
+
     </>
   );
 }
 
-function Result() {
-  return(
-    <>
-      <div>
-        <h2>Net Cost: </h2>
-      </div>
-    </>
-  );
-}
+
 
 export default function CalculationTool() {
   return (
