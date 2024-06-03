@@ -1,6 +1,4 @@
 import { useState } from "react";
-import "./App.css";
-import HeaderBar from "./HeaderBar/HeaderBar";
 import { useNavigate } from "react-router-dom";
 
 export default function Home() {
